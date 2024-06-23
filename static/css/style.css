@@ -1,12 +1,12 @@
 html {
-    background-color: #333333;
+    background-image: url("https://api.lemans.org/media/cache/api_news_large/assets/fileuploads/61/1e/611ed78e0c95f.jpg");
+    background-color: #984444;
 }
 
 body {
     background-color: #000000;
     color: #ffffff;
-    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
-    width: 75%;
+    width: 95%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -21,7 +21,7 @@ header, footer {
 }
 
 nav {
-    background-color: #444444;
+    background-color: #575757;
     margin: 0;
     padding: 3px;
 }
@@ -49,7 +49,7 @@ nav ul {
 
  table {
      border: 2px solid #ffffff;
-     width: 100%;
+     width: 80%;
      border-collapse: collapse;
  }
 
