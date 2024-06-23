@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block main %}
+        <h2>All Data</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Years</td>
+                <td>Drivers</td>
+                <td>Class</td>
+                <td>Team</td>
+                <td>Car</td>
+                <td>Tyre</td>
+                <td>Laps</td>
+                <td>Km</td>
+                <td>Mi</td>
+                <td>Series</td>
+                <td>Driver_nationality</td>
+                <td>Team_nationality</td>
+                <td>Average_speed_kmh</td>
+                <td>Average_speed_mmh</td>
+                <td>Average_lap_time</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                    <td>{{ row[6] }}</td>
+                    <td>{{ row[7] }}</td>
+                    <td>{{ row[8] }}</td>
+                    <td>{{ row[9] }}</td>
+                    <td>{{ row[10] }}</td>
+                    <td>{{ row[11] }}</td>
+                    <td>{{ row[12] }}</td>
+                    <td>{{ row[13] }}</td>
+                    <td>{{ row[14] }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}
