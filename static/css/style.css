@@ -63,3 +63,9 @@ nav ul {
      color: #000000;
      background-color: #999999;
  }
+
+ form {
+     color: #dddddd;
+     text-decoration: none;
+     font-weight: bold;
+ }
