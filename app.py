@@ -23,7 +23,7 @@ def render_home_page():  # put application's code here
 @app.route('/display/<table_type>')
 def render_display_page(table_type):  # put application's code here
 
-    query = "SELECT Years, Drivers, Class, Team, Car, Tyre, Laps, Km, Mi, Series, Driver_nationality, Team_nationality, Average_speed_kmh, Average_speed_mph, Average_lap_time FROM LeMans_Winners WHERE Team_nationality = ?"
+    query = "SELECT Years, Drivers, Class, Team, Car, Tyre, Laps, Km, Mi, Series, Driver_nationality, Team_nationality, Average_speed_kmh, Average_speed_mph, Average_lap_time FROM LeMans_Winners WHERE Driver_nationality = ?"
     connection = create_connection(DATABASE)
     cursor = connection.cursor()
     cursor.execute(query, (table_type, ))
@@ -31,7 +31,6 @@ def render_display_page(table_type):  # put application's code here
     data_list = cursor.fetchall()
 
     return render_template('display.html', data=data_list, page_title=table_type)
-
 
 @app.route('/search', methods=['GET', 'POST'])
 def render_search_page():  # put application's code here
