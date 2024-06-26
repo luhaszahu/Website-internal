@@ -45,6 +45,18 @@ def render_display_full_page():  # put application's code here
     return render_template('displayFull.html', data=data_list)
 
 
+@app.route('/LapTimes')
+def render_LapTimes_page():  # put application's code here
+    query = "SELECT Years, Drivers, Class, Team, Car, Tyre, Laps, Km, Mi, Series, Driver_nationality, Team_nationality, Average_speed_kmh, Average_speed_mph, Average_lap_time FROM LeMans_Winners order by Average_lap_time asc"
+    connection = create_connection(DATABASE)
+    cursor = connection.cursor()
+    cursor.execute(query, )
+
+    data_list = cursor.fetchall()
+
+    return render_template('LapTimes.html', data=data_list)
+
+
 @app.route('/search', methods=['GET', 'POST'])
 def render_search_page():  # put application's code here
 
